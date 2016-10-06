@@ -14,7 +14,7 @@ RUN a2enmod rewrite && \
     npm \
     git &&
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \ \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     docker-php-ext-configure pdo_pgsql && \
     docker-php-ext-install pdo pdo_pgsql mbstring bcmath zip gd exif && \
     gem install -n /usr/bin sass && \
