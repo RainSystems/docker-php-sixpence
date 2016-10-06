@@ -12,7 +12,7 @@ RUN a2enmod rewrite && \
     imagemagick \
     libmemcached-dev \
     npm \
-    git &&
+    git && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     docker-php-ext-configure pdo_pgsql && \
