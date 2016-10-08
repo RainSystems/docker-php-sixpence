@@ -1,4 +1,4 @@
-FROM php:7-apache
+FROM php:5-apache
 
 RUN a2enmod rewrite && \
     a2enmod env && \
@@ -18,7 +18,7 @@ RUN a2enmod rewrite && \
     docker-php-ext-configure pdo_pgsql && \
     docker-php-ext-install pdo pdo_pgsql mbstring bcmath zip gd exif && \
     gem install -n /usr/bin sass && \
-    pecl install memcached apcu && \
+    pecl install memcached apcu-4.0.8 && \
     ln -s /usr/bin/nodejs /usr/bin/node && \
     curl -sS https://getcomposer.org/installer | php && \
     mv composer.phar /usr/local/bin/composer && \
