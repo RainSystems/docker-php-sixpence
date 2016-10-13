@@ -22,5 +22,6 @@ RUN a2enmod rewrite && \
     ln -s /usr/bin/nodejs /usr/bin/node && \
     curl -sS https://getcomposer.org/installer | php && \
     mv composer.phar /usr/local/bin/composer && \
-    rm -rf /var/www/*
+    rm -rf /var/www/* /etc/apache2/sites-enabled/000-default.conf
+
 
